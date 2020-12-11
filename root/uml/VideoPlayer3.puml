@@ -1,0 +1,28 @@
+'Everything that starts with a simple quote 'is a comment. You can also put comments on several lines using/'to start and '/to end.
+
+'Start of UML diagram
+@startuml
+header CVX-AI - Vue & Flask framework interaction
+title VideoPlayer.vue (String generation)
+
+skinparam style strictuml
+' skinparam SequenceMessageAlignment center
+skinparam MaxMessageSize 120
+scale 1
+
+activate Website
+activate "Website Backend"
+Website -> "Website Backend": button onclick event
+"Website Backend" -> "Website Backend": initialize command string generation
+activate "Website Backend" #FFBBBB
+loop generate args x9
+"Website Backend" -> "Website Backend": Stringify JSON arg
+"Website Backend" -> "Website Backend": Serialize JSON arg
+"Website Backend" -> "Website Backend": Set arg as global var
+end
+deactivate "Website Backend"
+"Website Backend" --> Website: return success
+deactivate "Website Backend"
+deactivate Website
+
+@enduml

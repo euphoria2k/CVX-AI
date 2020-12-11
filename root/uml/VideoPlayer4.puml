@@ -1,0 +1,35 @@
+'Everything that starts with a simple quote 'is a comment. You can also put comments on several lines using/'to start and '/to end.
+
+'Start of UML diagram
+@startuml
+header CVX-AI - Vue & Flask framework interaction
+title VideoPlayer.vue (Video analysis)
+
+skinparam style strictuml
+' skinparam SequenceMessageAlignment center
+skinparam MaxMessageSize 120
+scale 1
+
+activate Website
+activate "Website Server"
+activate "Flask Server"
+Website -> "Website Server": button onclick event
+"Website Server" -> "Flask Server": POST request to initialize command string
+"Flask Server" -> "Flask Server": combine shell command strings
+"Flask Server" -> AI: run command string and execute
+activate AI
+AI -> AI: analyzes video
+AI -> "Tkinter Instance": display video analysis to
+activate "Tkinter Instance"
+"Tkinter Instance" --> AI: end of video; analysis complete
+deactivate "Tkinter Instance"
+AI --> AI: export video result to host computer
+AI --> "Flask Server": process thread complete
+deactivate AI
+"Flask Server" --> "Website Server": process finished
+"Website Server" --> "Website": idle; ready
+deactivate "Flask Server"
+deactivate "Website Server"
+deactivate "Website"
+
+@enduml

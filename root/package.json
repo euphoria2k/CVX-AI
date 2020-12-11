@@ -1,0 +1,90 @@
+{
+  "name": "architectui-vue-free",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": "set PORT=8090 && node filesystem-server.js -d C:/Users/HP/Documents/CVX_AI_WebUI/root/api/"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^0.1.10",
+    "@popperjs/core": "^2.4.4",
+    "@syncfusion/ej2-filemanager-node-filesystem": "^18.1.54",
+    "@syncfusion/ej2-vue-charts": "*",
+    "@syncfusion/ej2-vue-filemanager": "^18.3.35",
+    "@syncfusion/ej2-vue-grids": "^18.3.40",
+    "animate-sass": "^0.8.2",
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.2",
+    "bootstrap-vue": "^2.17.3",
+    "chart.js": "^2.9.3",
+    "cors": "^2.8.5",
+    "es6-promise": "^4.2.8",
+    "firebase": "^7.22.1",
+    "increase-memory-limit": "^1.0.7",
+    "jquery": "^3.5.1",
+    "mdbootstrap": "^4.19.1",
+    "node": "^14.11.0",
+    "node-sass": "^4.14.1",
+    "pe7-icon": "^1.0.4",
+    "perfect-scrollbar": "^1.5.0",
+    "popper.js": "^1.16.1",
+    "portal-vue": "^2.1.7",
+    "sass-loader": "^7.3.1",
+    "save": "^2.4.0",
+    "v-viewer": "^1.5.1",
+    "vue": "^2.6.12",
+    "vue-chartjs": "^3.5.1",
+    "vue-feeds-youtube": "0.0.7",
+    "vue-multiselect": "^2.1.6",
+    "vue-perfect-scrollbar": "^0.1.0",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.4.3",
+    "vue-sidebar-menu": "^3.12.2",
+    "vue-table-dynamic": "^0.3.2",
+    "vue2-google-maps": "^0.10.7",
+    "vuefire": "^2.2.4",
+    "vuex": "^3.5.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^3.12.1",
+    "@vue/cli-service": "^3.12.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3.0.1",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

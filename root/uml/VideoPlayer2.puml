@@ -1,0 +1,57 @@
+'Everything that starts with a simple quote 'is a comment. You can also put comments on several lines using/'to start and '/to end.
+
+'Start of UML diagram
+@startuml
+header CVX-AI - Vue & Flask framework interaction
+title VideoPlayer.vue (Setting directories)
+
+skinparam style strictuml
+' skinparam SequenceMessageAlignment center
+skinparam MaxMessageSize 120
+scale 1
+
+note right of Website
+classOptions: [
+    { value: "--person",text: "Person" },
+    { value: "--shirt", text: "Shirt" },
+    ...
+    <OMMITTED>
+],
+end note
+note right of Website
+colorOptions: [
+    { value: "--Fuzzy_pink",
+      text: "[X11] Pink" },
+    { value: "--Fuzzy_red",
+      text: "[X11] Red" },
+    ...
+    <OMMITTED> 
+],
+end note
+activate Website
+activate "Web Server"
+activate "Flask Server"
+database "PC Filesystem"
+activate "PC Filesystem"
+Website -> "Web Server": selectClassLabel(), selectColorLabel()
+note right of Website
+http://localhost:8090/
+end note
+"Web Server" -> "Flask Server": POST request
+"Flask Server" -> "Flask Server": setDirectories()
+activate "Flask Server" #FFBBBB
+loop open window x4
+    "Flask Server" -> "PC Filesystem": get directory/file choice
+    "PC Filesystem" -> "Flask Server": return selected directory/file as JSON
+    note left of "PC Filesystem"
+        {"dir":"' + selectedDir + '"}
+    end note
+end
+deactivate "Flask Server"
+"Flask Server" --> "Web Server": response success 
+
+deactivate Website
+deactivate "Flask Server"
+deactivate "PC Filesystem"
+
+@enduml
