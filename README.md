@@ -46,12 +46,6 @@ The clothing classification used uses YOLO's DarkNet object detection. It detect
 * Skirt
 * Footwear
 
-## Setup, Installation, and User Guide
-
-## Changelog
-
-## Future Plans
-
 ## Credits
 This project wouldn't have been possible without the use of the following modules, frameworks and algorithms:
 * YOLOv4
